@@ -4,24 +4,26 @@ function u(a)for b=1,a do turtle.up()end end;function f(c)for d=1,c do turtle.fo
 -- EDIT --
 
 args = {...}
-a = args[1]
-b = args[2]
-rota = 1
+a = args[1] -- Depth of the floor.
+b = args[2] -- Width of the floor.
+rotation = 1 -- Which direction the turtle is facing.
 
+-- Turn around for a new line.
 function rot()
-  if (rota == 1) then
+  if (rotation == 1) then
     t(1)
     f(1)
     t(1)
-    rota = 2
+    rotation = 2
   else
     t(2)
     f(1)
     t(2)
-    rota = 1
+    rotation = 1
   end
 end
 
+-- Place a row of blocks then move forward. Do not move forward after placing the last block in a row.
 function row()
   for i=1, a-1 do
     turtle.placeDown()

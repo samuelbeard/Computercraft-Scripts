@@ -1,5 +1,7 @@
--- Turtle Move API v0.1 -- By Samuel Beard
+-- Turtle Move API v0.2 -- By Samuel Beard
 -- No Fuel Requirements.
+
+-- u | f | d | b | t | r | l
 
 -- FUNCTIONS --
 
@@ -44,4 +46,18 @@ function t(i)
     turtle.turnRight()
     turtle.turnRight()
   end
+end
+
+-- Move Right
+function r(rr)
+  turtle.turnRight()
+  f(rr)
+  turtle.turnLeft()
+end
+
+-- Move Left
+function l(ll)
+  turtle.turnLeft()
+  f(ll)
+  turtle.turnRight()
 end
