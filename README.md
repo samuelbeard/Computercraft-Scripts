@@ -22,6 +22,12 @@ http://www.computercraft.info/forums2/index.php?/topic/9915-run-functions-of-oth
 ---
 
 # Turtles
+Colour Coding:
+- BROWN - Lumberjack
+- GREEN - Harvesting
+- RED - Delivery
+- BLACK - Builder
+- WHITE - Miner
 
 ---
 ### Move
@@ -102,3 +108,14 @@ Harvest pumpkins or watermelons.
 - Put the pumpkins in a long row and on each end, place a block of cobble.
 - On top of one of the cobble, place a chest.
 - Place the turtle on top of pumpkins next to, and facing the chest.
+
+---
+### Walkway
+```
+walkway <length>
+```
+Digs out a walkway two blocks high by one block wide. Also places blocks for the floor if needed.
+
+#### Setup
+- Place the turtle facing the direction the tunnel will be at floor level.
+- Place some floor blocks in slot 1.

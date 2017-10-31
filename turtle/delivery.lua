@@ -5,11 +5,12 @@ function u(a)for b=1,a do turtle.up()end end;function f(c)for d=1,c do turtle.fo
 
 -- Deliver Collected Resources
 function deliver()
-  print("Delivering Cargo")
   for j=1, 16 do
     turtle.select(j)
     turtle.suck() -- DIRECTION
   end
+  -- print("Delivering Cargo")
+  os.setComputerLabel("Delivering Cargo")
   -- Deliver Route
 
   --
@@ -17,7 +18,8 @@ function deliver()
     turtle.select(k)
     turtle.drop() -- DIRECTION
   end
-  print("Returning")
+  -- print("Returning")
+  os.setComputerLabel("Returning")
   -- Route Back to Start
 
   --

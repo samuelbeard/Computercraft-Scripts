@@ -5,6 +5,7 @@ function u(a)for b=1,a do turtle.up()end end;function f(c)for d=1,c do turtle.fo
 
 -- Move back down to the ground.
 function moveToGround()
+  os.setComputerLabel("Going Down")
   while (turtle.detectDown() == false) do
     d(1)
   end
@@ -12,6 +13,7 @@ end
 
 -- Suck in all directions to find saplings. (Won't suck behind it as there might be a chest there.)
 function findItems()
+  os.setComputerLabel("Looking For Items")
   turtle.suck()
   t(1)
   turtle.suck()
@@ -30,8 +32,9 @@ function checkItemSlotHasItems(slot, minimum)
   end
 end
 
--- Returns "air", "sapling", or "tree"
+-- Return "air", "sapling", or "tree"
 function checkBlockInFront()
+  os.setComputerLabel("Checking")
   if turtle.detect() then
     if turtle.compare() then
       return "sapling"
@@ -43,8 +46,9 @@ function checkBlockInFront()
   end
 end
 
--- Chops down a tree until it detects air.
+-- Chop down a tree until you detect air.
 function chopDownTree()
+  os.setComputerLabel("Lumberjacking")
   while turtle.detect() do
     turtle.dig()
     turtle.digUp()
@@ -53,22 +57,44 @@ function chopDownTree()
   moveToGround()
 end
 
+function plantASapling()
+  turtle.select(1)
+  turtle.place()
+end
+
+-- Drop items from slots 2,3,4 into a chest behind you.
+function placeItemsInChest()
+  os.setComputerLabel("Storing")
+  t(3)
+  turtle.select(2)
+  turtle.drop()
+  turtle.select(3)
+  turtle.drop()
+  turtle.select(4)
+  turtle.drop()
+  turtle.select(1)
+  t(3)
+end
+
 ---- SCRIPT START ----
 while true do
   turtle.select(1)
-  -- Check that it has more than one sapling in slot one.
+  -- Check that you have more than one sapling in slot one.
   if checkItemSlotHasItems(1,2) then
     -- Compare the block in front to the sapling. Dig it out or plant a sapling. Otherwise, wait.
     if (checkBlockInFront() == "air") then
       plantASapling()
+      sleep(30)
     elseif (checkBlockInFront() == "sapling") then
-      sleep(20)
+      sleep(30)
     elseif (checkBlockInFront() == "tree") then
       chopDownTree()
+      placeItemsInChest()
     end
   else
     -- If there is only one sapling, stop
     print("Not enough saplings.")
+    os.setComputerLabel("Need More Saplings")
     return
   end
 end

@@ -6,10 +6,12 @@ height = args[1] -- Height of the pillar.
 slot = args[2] -- Building material slot.
 
 function buildTower()
+  os.setComputerLabel("Building a Pillar")
   for x=1, height do
     turtle.place()
     u(1)
   end
+  os.setComputerLabel("Going Down")
   d(height - 1)
 end
 
@@ -17,5 +19,7 @@ turtle.select(slot)
 if (turtle.getItemCount() >= height) then
   buildTower()
 else
-  print("Not Enought Resources")
+  -- print("Not Enought Resources")
+  os.setComputerLabel("Not Enought Resources")
 end
+os.setComputerLabel("Done")
