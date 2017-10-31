@@ -30,6 +30,13 @@ Colour Coding:
 - WHITE - Miner
 
 ---
+### GitHub
+```
+> github get <github-path> <program-name>
+> github get samuelbeard/Computercraft-Scripts/master/turtle/pillar.lua
+```
+
+---
 ### Move
 This is the movement API. This is minified and injected into all turtle scripts.
 
@@ -42,7 +49,11 @@ This is the movement API. This is minified and injected into all turtle scripts.
 
 ---
 ### Delivery
-*Edit for each turtle based on its delivery route.*
+**Edit for each turtle based on its delivery route.**
+
+```
+> delivery
+```
 
 Collects cargo from one chest and delivers it to another.
 
@@ -51,7 +62,7 @@ Start the turtle next to the inventory it will be taking from.
 ---
 ### Pillar
 ```
-pillar <height> <material slot>
+> pillar <height> <material slot>
 ```
 Builds a 1 block pillar to the specified height.
 
@@ -60,16 +71,9 @@ Builds a 1 block pillar to the specified height.
 - Place the building material into the selected inv slot.
 
 ---
-### GitHub
-```
-github get <github-path> <program-name>
-github get samuelbeard/Computercraft-Scripts/master/turtle/pillar.lua
-```
-
----
 ### Floor
 ```
-floor <x> <y>
+> floor <x> <y>
 ```
 Builds a floor. The turtle will place blocks below it.
 
@@ -86,7 +90,9 @@ Args:
 
 ---
 ### Lumberjack
-- v1 - Cut the tree in front of it down. Place the wood in a chest behind.
+```
+> lumberjack
+```
 - v2 - Cut down trees in front of it and either side of it.
 - v3 - Collect saplings from a chest and plant them. Put the logs back into that chest.
 
@@ -99,7 +105,7 @@ Args:
 ---
 ### Pumpkin
 ```
-pumpkin
+> pumpkin
 ```
 Harvest pumpkins or watermelons.
 - v2 - Two rows of harvestables.
@@ -112,10 +118,22 @@ Harvest pumpkins or watermelons.
 ---
 ### Walkway
 ```
-walkway <length>
+> walkway <length>
 ```
 Digs out a walkway two blocks high by one block wide. Also places blocks for the floor if needed.
 
 #### Setup
 - Place the turtle facing the direction the tunnel will be at floor level.
 - Place some floor blocks in slot 1.
+
+---
+<!-- ### Cobblestone Generator
+```
+cobblestone <side>
+```
+
+Mines cobblestone in one spot from a cobblestone generator.
+
+#### Setup
+- Place the turtle facing, below or above the location where cobblestone is generated.
+- `cobblestone <side>` - `up`, `down`, `front`. -->
