@@ -49,10 +49,14 @@ end
 -- Chop down a tree until you detect air.
 function chopDownTree()
   os.setComputerLabel("Lumberjacking")
-  while turtle.detect() do
+  local shouldChop = true
+  while shouldChop do
     turtle.dig()
     turtle.digUp()
     u(1)
+    if (turtle.detect() == false) then
+      shouldChop = false
+    end
   end
   moveToGround()
 end
