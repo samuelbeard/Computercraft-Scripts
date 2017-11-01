@@ -1,7 +1,7 @@
--- Turtle Move API v0.2 -- By Samuel Beard
+-- Turtle Move API v0.3 -- By Samuel Beard
 -- No Fuel Requirements.
 
--- u | f | d | b | t | r | l
+-- u | f | d | b | t | r | l | floor
 
 -- FUNCTIONS --
 
@@ -60,4 +60,11 @@ function l(ll)
   turtle.turnLeft()
   f(ll)
   turtle.turnRight()
+end
+
+-- Move down to the floor
+function floor()
+  while (turtle.detectDown() == false) do
+    d(1)
+  end
 end
