@@ -34,15 +34,17 @@ end
 
 -- Return "air", "sapling", or "tree"
 function checkBlockInFront()
+  turtle.select(1)
   os.setComputerLabel("Checking")
   if turtle.detect() then
-    if turtle.compare() then
-      return "sapling"
-    else
-      return "tree"
+    u(1)
+    if turtle.detect() then
+      d(1)
+      return true
     end
+    d(1)
   else
-    return "air"
+    return false
   end
 end
 
@@ -86,14 +88,12 @@ while true do
   -- Check that you have more than one sapling in slot one.
   if checkItemSlotHasItems(1,2) then
     -- Compare the block in front to the sapling. Dig it out or plant a sapling. Otherwise, wait.
-    if (checkBlockInFront() == "air") then
-      plantASapling()
-      sleep(30)
-    elseif (checkBlockInFront() == "sapling") then
-      sleep(30)
-    elseif (checkBlockInFront() == "tree") then
+    if checkBlockInFront() then
       chopDownTree()
       placeItemsInChest()
+    else
+      plantASapling()
+      sleep(30)
     end
   else
     -- If there is only one sapling, stop
