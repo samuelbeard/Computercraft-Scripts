@@ -18,7 +18,7 @@ function goBack()
   end
   turtle.drop()
   t(3)
-  sleep(30)
+  sleep(5)
 end
 
 turtle.select(1)
