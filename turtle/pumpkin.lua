@@ -17,12 +17,13 @@ function goBack()
     f(1)
   end
   turtle.drop()
+  t(3)
   sleep(30)
 end
 
 turtle.select(1)
+t(3)
 while true do
-  t(3)
   local success, data = turtle.inspectDown()
   if (data.name == cobbleID) then
     goBack()
