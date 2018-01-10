@@ -134,10 +134,23 @@ Digs out a walkway two blocks high by one block wide. Also places blocks for the
 Harvests a row of sugar cane.
 
 #### Setup
-Place a single line of cane.
-Place a stack of three cobblestone at one end of the row.
-Place a chest on the floor at the other end of the cane row.
-Place the turtle on top of the chest. Facing towards the row of cane.
+- Place a single line of cane.
+- Place a stack of three cobblestone at one end of the row.
+- Place a chest on the floor at the other end of the cane row.
+- Place the turtle on top of the chest. Facing towards the row of cane.
+
+---
+### Cactus
+```
+> cactus
+```
+Harvests cactus.
+
+#### Setup
+- Place a row of cactus then a row of nothing then a symmetrical row of cactus.
+- Place a chest at the end of the rows in the center row. The chest should be on the same level as the lowest cactus block.
+- Place the turtle above the chest, facing into the rows.
+- Place a 3 high stack of cobblestone at the end of the rows in the center row.
 
 ---
 <!-- ### Cobblestone Generator
