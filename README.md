@@ -33,7 +33,7 @@ Colour Coding:
 ### GitHub
 ```
 > github get <github-path> <program-name>
-> github get samuelbeard/Computercraft-Scripts/master/turtle/pillar.lua
+> github get samuelbeard/Computercraft-Scripts/master/turtle/pillar.lua pillar
 ```
 
 ---
@@ -125,6 +125,19 @@ Digs out a walkway two blocks high by one block wide. Also places blocks for the
 #### Setup
 - Place the turtle facing the direction the tunnel will be at floor level.
 - Place some floor blocks in slot 1.
+
+---
+### Cane
+```
+> cane
+```
+Harvests a row of sugar cane.
+
+#### Setup
+Place a single line of cane.
+Place a stack of three cobblestone at one end of the row.
+Place a chest on the floor at the other end of the cane row.
+Place the turtle on top of the chest. Facing towards the row of cane.
 
 ---
 <!-- ### Cobblestone Generator
