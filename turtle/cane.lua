@@ -4,12 +4,6 @@ function u(a)for b=1,a do turtle.up()end end;function f(c)for d=1,c do turtle.fo
 chestID = "minecraft:chest"
 cobbleID = "minecraft:cobblestone"
 
-function harvestBlock()
-  os.setComputerLabel("Harvesting")
-  turtle.dig()
-  f(1)
-end
-
 function turnAround()
   turtle.digDown()
   d(1)
@@ -26,6 +20,7 @@ function harvest()
   if (data.name == cobbleID) then
     turnAround()
   else if (dataDown.name == chestID) then
+    turtle.dropDown()
     restart()
   else
     turtle.dig()
