@@ -33,7 +33,7 @@ Colour Coding:
 ### GitHub
 ```
 > github get <github-path> <program-name>
-> github get samuelbeard/Computercraft-Scripts/master/turtle/pillar.lua pillar
+> github get samuelbeard/cc/master/turtle/pillar.lua pillar
 ```
 
 ---

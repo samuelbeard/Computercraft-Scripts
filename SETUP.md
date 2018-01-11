@@ -8,7 +8,7 @@ pastebin get xxxxxx github
 ```
 - Use the `github.lua` script to pull down whatever scripts you need.
 ```
-github get samuelbeard/Computercraft-Scripts/master/turtle/lumberjack.lua lumberjack
+github get samuelbeard/cc/master/turtle/lumberjack.lua lumberjack
 ```
 
 > Why use Pastbin for just one script?
