@@ -40,12 +40,12 @@ Colour Coding:
 ### Move
 This is the movement API. This is minified and injected into all turtle scripts.
 
-- `u()` - Move up x blocks
-- `d()` - Move down x blocks
-- `t()` - Turn. 1 = Left, 2 = Right, 3 = 180deg
-- `b()` - Move back x blocks
-- `r()` - Move right x blocks and end up facing your original direction.
-- `l()` - Move left x blocks and end up facing your original direction.
+- `u(x)` - Move up x blocks
+- `d(x)` - Move down x blocks
+- `t(x)` - Turn. 1 = Left, 2 = Right, 3 = 180deg
+- `b(x)` - Move back x blocks and end up facing your original direction.
+- `r(x)` - Move right x blocks and end up facing your original direction.
+- `l(x)` - Move left x blocks and end up facing your original direction.
 
 ---
 ### Delivery
@@ -89,7 +89,7 @@ Args:
 - Place the floor material in inv slot 1.
 
 ---
-### Lumberjack
+### Lumberjack - NOT WORKING
 ```
 > lumberjack
 ```
