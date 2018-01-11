@@ -122,6 +122,8 @@ Harvest pumpkins or watermelons.
 ```
 Digs out a walkway two blocks high by one block wide. Also places blocks for the floor if needed.
 
+- v2 - Protect against gravel and sand falling down.
+
 #### Setup
 - Place the turtle facing the direction the tunnel will be at floor level.
 - Place some floor blocks in slot 1.
@@ -152,6 +154,18 @@ Harvests cactus.
 - Place the turtle above the chest, facing into the rows.
 - Place a 3 high stack of cobblestone at the end of the rows in the center row.
 
+---
+### Step Mine
+```
+stepmine
+```
+Mines down diagonally and places steps as it goes.
+
+- v0.2 - When it runs out of steps and mines something else into slot 1, it will place that down again...
+
+#### Setup
+- Place the turtle facing the direction you want it to mine.
+- Place stair blocks into slot 1.
 ---
 <!-- ### Cobblestone Generator
 ```
