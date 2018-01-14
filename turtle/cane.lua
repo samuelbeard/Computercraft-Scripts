@@ -3,6 +3,7 @@ function u(a)for b=1,a do turtle.up()end end;function f(c)for d=1,c do turtle.fo
 
 chestID = "minecraft:chest"
 cobbleID = "minecraft:cobblestone"
+-- Gold Chest -> IronChest:BlockIronChest:1
 
 function turnAround()
   turtle.digDown()
@@ -21,7 +22,9 @@ function harvest()
 
   if (data.name == cobbleID) then
     turnAround()
-  else if (dataDown.name == chestID) then
+  end
+  
+  if (dataDown.name == chestID) then
     turtle.dropDown()
     restart()
   else
