@@ -8,11 +8,13 @@ function turnAround()
   turtle.digDown()
   d(1)
   t(3)
+end
 
 function restart()
   t(3)
   u(1)
-
+end
+  
 function harvest()
   local successDown, dataDown = turtle.inspectDown()
   local success, data = turtle.inspect()
@@ -26,6 +28,7 @@ function harvest()
     turtle.dig()
     f(1)
   end
+end
 
 turtle.select(1)
 u(1)
