@@ -26,14 +26,14 @@ Colour Coding:
 - BROWN - Lumberjack
 - GREEN - Harvesting
 - RED - Delivery
-- YELLOW - Builder
+- BLACK - Builder
 - WHITE - Miner
 
 ---
 ### GitHub
 ```
 > github get <github-path> <program-name>
-> github get samuelbeard/cc/master/turtle/pillar.lua pillar
+> github get turtle/pillar.lua pillar
 ```
 
 ---
@@ -46,6 +46,7 @@ This is the movement API. This is minified and injected into all turtle scripts.
 - `b(x)` - Move back x blocks and end up facing your original direction.
 - `r(x)` - Move right x blocks and end up facing your original direction.
 - `l(x)` - Move left x blocks and end up facing your original direction.
+- `dump(d)` - Dump all cargo. d = direction to dump (up, down or blank).
 
 ---
 ### Delivery
@@ -62,7 +63,7 @@ Start the turtle next to the inventory it will be taking from.
 ---
 ### Pillar
 ```
-> pillar <height> <material slot>
+> pillar <height>
 ```
 Builds a 1 block pillar to the specified height.
 
@@ -70,8 +71,12 @@ Builds a 1 block pillar to the specified height.
 - Place the turtle on the ground. Pillar will be built directly in front of it.
 - Place the building material into the selected inv slot.
 
+#### Improvements
+- When a stack of materials is depleted, move to the next stack.
+- If no height is given. Go until it either runs out of materials or hits something above it.
+
 ---
-### Floor
+### Floor - NOT WORKING
 ```
 > floor <x> <y>
 ```
@@ -93,8 +98,6 @@ Args:
 ```
 > lumberjack
 ```
-- v2 - Cut down trees in front of it and either side of it.
-- v3 - Collect saplings from a chest and plant them. Put the logs back into that chest.
 
 #### Setup
 - Place the turtle on the floor.
@@ -102,18 +105,23 @@ Args:
 - Place saplings in inv slot 1.
 - Ensure that the space in front of the turtle can be planted in.
 
+#### Improvements
+- Cut down trees in front and either side of the turtle.
+- Collect saplings from a chest and plant them. Put the logs back into that chest.
+
 ---
 ### Pumpkin
 ```
 > pumpkin
 ```
-Harvest pumpkins or watermelons.
-- v2 - Two rows of harvestables.
 
 #### Setup
 - Put the pumpkins in a long row and on each end, place a block of cobble.
 - On top of one of the cobble, place a chest.
 - Place the turtle on top of pumpkins next to, and facing the chest.
+
+#### Improvements
+- Harvest from two rows.
 
 ---
 ### Walkway
@@ -122,11 +130,12 @@ Harvest pumpkins or watermelons.
 ```
 Digs out a walkway two blocks high by one block wide. Also places blocks for the floor if needed.
 
-- v2 - Protect against gravel and sand falling down.
-
 #### Setup
 - Place the turtle facing the direction the tunnel will be at floor level.
 - Place some floor blocks in slot 1.
+
+#### Improvements
+- Protect against gravel and sand falling down.
 
 ---
 ### Cane
@@ -140,6 +149,9 @@ Harvests a row of sugar cane.
 - Place a stack of three cobblestone at one end of the row.
 - Place a chest on the floor at the other end of the cane row.
 - Place the turtle on top of the chest. Facing towards the row of cane.
+
+#### Improvements
+- Stop detecting the chest and instead, detect a block behind the chest. So it can be any inventory.
 
 ---
 ### Cactus

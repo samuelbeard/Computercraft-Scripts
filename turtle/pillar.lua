@@ -3,19 +3,28 @@ function u(a)for b=1,a do turtle.up()end end;function f(c)for d=1,c do turtle.fo
 
 args = {...}
 height = args[1] -- Height of the pillar.
-slot = args[2] -- Building material slot.
+
+function checkAbove(x)
+  if (turtle.detectUp()) then
+    d(x)
+    return false
+  end
+end
 
 function buildTower()
   os.setComputerLabel("Building a Pillar")
   for x=1, height do
     turtle.place()
+    if (checkAbove() == false) then
+      error()
+    end
     u(1)
   end
   os.setComputerLabel("Going Down")
-  d(height - 1)
+  d(height)
 end
 
-turtle.select(slot)
+turtle.select(1)
 if (turtle.getItemCount() >= height) then
   buildTower()
 else

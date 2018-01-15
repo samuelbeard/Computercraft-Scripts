@@ -19,7 +19,7 @@ if fs.exists( program ) then
   return
 end
 
-local github_url = "https://raw.github.com/"..github_path
+local github_url = "https://raw.github.com/samuelbeard/cc/master/"..github_path
 
 local request = http.get( github_url )
 local response = request.readAll()

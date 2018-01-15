@@ -68,3 +68,20 @@ function floor()
     d(1)
   end
 end
+
+-- Dump all cargo in every slot.
+-- down, up or blank
+function dump(direction)
+  for x=1, 16 do
+    turtle.select(x)
+    if (direction == "") then
+      turtle.drop()
+    end
+    if (direction == "down") then
+      turtle.dropDown()
+    end
+    if (direction == "up") then
+      turtle.dropUp()
+    end
+  end
+end
