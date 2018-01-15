@@ -46,6 +46,7 @@ This is the movement API. This is minified and injected into all turtle scripts.
 - `b(x)` - Move back x blocks and end up facing your original direction.
 - `r(x)` - Move right x blocks and end up facing your original direction.
 - `l(x)` - Move left x blocks and end up facing your original direction.
+- `floor()` - Move down to the floor.
 - `dump(d)` - Dump all cargo. d = direction to dump (up, down or blank).
 
 ---
@@ -74,6 +75,7 @@ Builds a 1 block pillar to the specified height.
 #### Improvements
 - When a stack of materials is depleted, move to the next stack.
 - If no height is given. Go until it either runs out of materials or hits something above it.
+- Use the `floor()` function to go back down instead of counting.
 
 ---
 ### Floor - NOT WORKING

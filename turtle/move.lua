@@ -1,7 +1,7 @@
--- Turtle Move API v0.3 -- By Samuel Beard
+-- Turtle Move API v0.4 -- By Samuel Beard
 -- No Fuel Requirements.
 
--- u | f | d | b | t | r | l | floor
+-- u | f | d | b | t | r | l | floor | dump
 
 -- FUNCTIONS --
 
