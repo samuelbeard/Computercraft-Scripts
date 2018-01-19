@@ -112,6 +112,7 @@ function buildTwoWalls()
   pillar(50)
   r(2)
   pillar(50)
+end
 
 function walls()
   -- Collect resources (10 Slots)
@@ -126,19 +127,19 @@ function walls()
 end
 
 function windows()
-
+  print(".")
 end
 
 function shaft()
-
+  print(".")
 end
 
 function openings() -- The front door and enterances to the floors.
-
+  print(".")
 end
 
 function buildFloors()
-
+  print("fd")
 end
 
 -- Start Script
