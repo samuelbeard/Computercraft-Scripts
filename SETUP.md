@@ -4,7 +4,7 @@
 - Dye the turtle.
 - Use pastebin to get the `github.lua` script.
 ```
-pastebin get xxxxxx github
+pastebin get 5CykJbA5 github
 ```
 - Use the `github.lua` script to pull down whatever scripts you need.
 ```
