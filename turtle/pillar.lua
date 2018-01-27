@@ -25,7 +25,7 @@ function buildTower()
 end
 
 turtle.select(1)
-if (turtle.getItemCount() >= height) then
+if (turtle.getItemCount() >= tonumber(height)) then
   buildTower()
 else
   -- print("Not Enought Resources")
