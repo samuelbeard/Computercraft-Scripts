@@ -117,10 +117,17 @@ end
 
 function walls()
   -- Collect resources (10 Slots)
+  t(3)
+  for yyy=1, 10 do
+    turtle.select(yyy)
+    turtle.suck()
+  end
+  turtle.select(1)
   -- Build the first two walls
   r(1)
   buildTwoWalls()
   -- Go get more blocks - refill with blocks (10 Slots) - move to new position.
+  error()
   -- Build last two walls
   turtle.select(1)
   buildTwoWalls()
