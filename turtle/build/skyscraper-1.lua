@@ -1,5 +1,4 @@
--- Turtle API v0.4 -- By Samuel Beard
-function u(a)for b=1,a do turtle.up()end end;function f(c)for d=1,c do turtle.forward()end end;function d(e)for f=1,e do turtle.down()end end;function b(g)for h=1,g do turtle.back()end end;function t(i)if i==1 then turtle.turnLeft()end;if i==2 then turtle.turnRight()end;if i==3 then turtle.turnRight()turtle.turnRight()end end;function r(j)turtle.turnRight()f(j)turtle.turnLeft()end;function l(k)turtle.turnLeft()f(k)turtle.turnRight()end;function floor()while turtle.detectDown()==false do d(1)end end;function dump(m)for n=1,16 do turtle.select(n)if m==""then turtle.drop()end;if m=="down"then turtle.dropDown()end;if m=="up"then turtle.dropUp()end end end
+os.loadAPI("move")
 
 -- Skyscraper Design 1
 -- 50 Stories High
@@ -26,8 +25,8 @@ end
 -- Foundation - Dig out and put down the base floor.
 function foundation()
   -- Get materials and move into position.
-  r(4)
-  t(3)
+  move.r(4)
+  move.t(3)
   turtle.select(1)
   turtle.suck()
   turtle.select(2)
@@ -37,44 +36,44 @@ function foundation()
   turtle.select(4)
   turtle.suck()
   turtle.select(1)
-  r(4)
-  t(3)
-  f(1)
+  move.r(4)
+  move.t(3)
+  move.f(1)
   -- Dig and place blocks two rows at a time.
   for x=1, 7 do
     for y=1, 14 do
       checkBlocksInSlot()
       turtle.digDown()
       turtle.placeDown()
-      f(1)
+      move.f(1)
     end
-    t(2)
-    f(1)
-    t(2)
-    f(1)
+    move.t(2)
+    move.f(1)
+    move.t(2)
+    move.f(1)
     for yy=1, 14 do
       checkBlocksInSlot()
       turtle.digDown()
       turtle.placeDown()
-      f(1)
+      move.f(1)
     end
-    t(1)
-    f(1)
-    t(1)
-    f(1)
+    move.t(1)
+    move.f(1)
+    move.t(1)
+    move.f(1)
   end
   -- Dump the rest of the blocks back into the chest.
-  t(3)
-  f(1)
-  r(10)
+  move.t(3)
+  move.f(1)
+  move.r(10)
   -- Dumps the stuff it picked up.
   turtle.drop()
-  u(2)
-  dump("down")
-  d(2)
+  move.u(2)
+  move.dump("down")
+  move.d(2)
   -- Go back to the starting position.
-  r(4)
-  t(3)
+  move.r(4)
+  move.t(3)
 end
 
 -- Build a pillar h high. Use material from s slot.
@@ -82,49 +81,49 @@ function pillar(h)
   for k=1, h do
     checkBlocksInSlot()
     turtle.place()
-    u()
+    move.u()
   end
-  floor()
+  move.floor()
 end
 
 function buildTwoWalls()
   pillar(50)
-  r(2)
+  move.r(2)
   pillar(50)
-  r(2)
+  move.r(2)
   pillar(50)
-  r(3)
+  move.r(3)
   pillar(50)
-  r(2)
+  move.r(2)
   pillar(50)
-  r(2)
+  move.r(2)
   pillar(50)
-  r(2)
-  f(2)
-  t(1)
+  move.r(2)
+  move.f(2)
+  move.t(1)
   pillar(50)
-  r(2)
+  move.r(2)
   pillar(50)
-  r(2)
+  move.r(2)
   pillar(50)
-  r(3)
+  move.r(3)
   pillar(50)
-  r(2)
+  move.r(2)
   pillar(50)
-  r(2)
+  move.r(2)
   pillar(50)
 end
 
 function walls()
   -- Collect resources (10 Slots)
-  t(3)
+  move.t(3)
   for yyy=1, 10 do
     turtle.select(yyy)
     turtle.suck()
   end
   turtle.select(1)
   -- Build the first two walls
-  r(1)
+  move.r(1)
   buildTwoWalls()
   -- Go get more blocks - refill with blocks (10 Slots) - move to new position.
   error()

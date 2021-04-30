@@ -6,9 +6,11 @@
 ```
 pastebin get 5CykJbA5 github
 ```
-- Use the `github.lua` script to pull down whatever scripts you need.
+
+- Run the setup
 ```
-github get turtle/lumberjack.lua lumberjack
+github get setup.lua setup
+setup
 ```
 
 > Why use Pastbin for just one script?

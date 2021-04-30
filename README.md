@@ -15,9 +15,11 @@ All scripts assume that fuel requirements are turned off.
 
 TRY:
 
-Place move.lua into rom/apis. Then in all scripts add `os.loadAPI("move")`. Then call all move functions with `move.u()`.
+In all scripts add `os.loadAPI("move")`. Then call all move functions with `move.u()`. Make sure `move` is on the turtle first.
 
 http://www.computercraft.info/forums2/index.php?/topic/9915-run-functions-of-other-files/
+
+IT WORKS
 
 ---
 
