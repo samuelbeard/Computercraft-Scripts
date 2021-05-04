@@ -2,12 +2,10 @@
 
 <details>
 <summary>Delivery</summary>
-<br>
 
 **Edit for each turtle based on its delivery route.**
 
 This script is not pulled during the setup as it always needs to be modified for a particular task.
-
 
 ```
 github get turtle/delivery <name of task>
@@ -20,6 +18,8 @@ github get turtle/delivery <name of task>
 Collects cargo from one chest and delivers it to another.
 
 Start the turtle next to the inventory it will be taking from.
+
+---
 </details>
 
 <details>
@@ -39,10 +39,12 @@ Builds a 1 block pillar to the specified height.
 - If no height is given. Go until it either runs out of materials or hits something above it.
 - Use the `floor()` function to go back down instead of counting.
 
+---
 </details>
 
----
-### Floor - NOT WORKING
+<details>
+<summary>Floor</summary>
+
 ```
 > floor <x> <y>
 ```
@@ -60,7 +62,11 @@ Args:
 - Place the floor material in inv slot 1.
 
 ---
-### Lumberjack - NOT WORKING
+</details>
+
+<details>
+<summary>Lumberjack</summary>
+
 ```
 > lumberjack
 ```
@@ -76,7 +82,9 @@ Args:
 - Collect saplings from a chest and plant them. Put the logs back into that chest.
 
 ---
-### Pumpkin
+</details>
+<details>
+<summary>Pumpkin</summary>
 ```
 > pumpkin
 ```
@@ -88,8 +96,8 @@ Args:
 
 #### Improvements
 - Harvest from two rows.
-
----
+</details>
+<details>
 ### Walkway
 ```
 > walkway <length>
@@ -104,7 +112,10 @@ Digs out a walkway two blocks high by one block wide. Also places blocks for the
 - Protect against gravel and sand falling down.
 
 ---
-### Cane
+</details>
+<details>
+<summary>Cane</summary>
+
 ```
 > cane
 ```
@@ -120,7 +131,10 @@ Harvests a row of sugar cane.
 - Stop detecting the chest and instead, detect a block behind the chest. So it can be any inventory.
 
 ---
-### Cactus
+</details>
+<details>
+<summary>Cactus</summary>
+
 ```
 > cactus
 ```
@@ -133,7 +147,10 @@ Harvests cactus.
 - Place a 3 high stack of cobblestone at the end of the rows in the center row.
 
 ---
-### Step Mine
+</details>
+<details>
+<summary>Step Mine</summary>
+
 ```
 stepmine
 ```
@@ -145,13 +162,3 @@ Mines down diagonally and places steps as it goes.
 - Place the turtle facing the direction you want it to mine.
 - Place stair blocks into slot 1.
 ---
-<!-- ### Cobblestone Generator
-```
-cobblestone <side>
-```
-
-Mines cobblestone in one spot from a cobblestone generator.
-
-#### Setup
-- Place the turtle facing, below or above the location where cobblestone is generated.
-- `cobblestone <side>` - `up`, `down`, `front`. -->

@@ -48,7 +48,7 @@ See `SETUP.md`.
 |---|---|---|
 |delivery|1.0|✅|
 |pillar|1.1|To Test|
-|
+||1.0|To Test|
 
 
 ---
