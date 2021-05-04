@@ -3,6 +3,7 @@
 <details>
 <summary>Delivery</summary>
 <br>
+
 **Edit for each turtle based on its delivery route.**
 
 This script is not pulled during the setup as it always needs to be modified for a particular task.
@@ -20,8 +21,10 @@ Collects cargo from one chest and delivers it to another.
 
 Start the turtle next to the inventory it will be taking from.
 </details>
----
-### Pillar
+
+<detail>
+<summary>Pillar</summary>
+
 ```
 > pillar <height>
 ```
@@ -35,6 +38,8 @@ Builds a 1 block pillar to the specified height.
 - When a stack of materials is depleted, move to the next stack.
 - If no height is given. Go until it either runs out of materials or hits something above it.
 - Use the `floor()` function to go back down instead of counting.
+
+</detail>
 
 ---
 ### Floor - NOT WORKING
