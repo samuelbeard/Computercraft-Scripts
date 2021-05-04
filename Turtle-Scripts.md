@@ -96,9 +96,12 @@ Args:
 
 #### Improvements
 - Harvest from two rows.
+
+---
 </details>
 <details>
-### Walkway
+<summary>Walkway</summary>
+
 ```
 > walkway <length>
 ```

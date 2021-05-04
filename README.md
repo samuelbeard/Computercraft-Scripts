@@ -4,8 +4,6 @@ All scripts assume that fuel requirements are turned off.
 
 #### To Make:
 - Crafting Scripts for Computers and Turtles
-- Sugarcane harvester
-- Cactus Harvester
 - Automatic Lighting
 - Mob Farm - Kill mobs, get the items, put them in a chest.
 - Cobblestone Generator? Because I can!
@@ -48,12 +46,10 @@ See `SETUP.md`.
 |---|---|---|
 |delivery|1.0|✅|
 |pillar|1.1|To Test|
-||1.0|To Test|
-
-
----
-
-
----
-
-
+|floor|1.0|To Test|
+|lumberjack|1.0|To Test|
+|pumpkin|1.0|To Test|
+|walkway|1.0|To Test|
+|cane|1.0|To Test|
+|cactus|1.0|To Test|
+|step mine|1.0|To Test|
