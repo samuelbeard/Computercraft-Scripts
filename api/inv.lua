@@ -23,3 +23,15 @@ function findMoreItems()
         }
     end
 end
+
+-- Selects the next slot with items in it.
+function selectNextSlotWithItems()
+    for x=1, 9 do
+        if (turtle.getItemCount(x) > 0) then
+            turtle.select(x)
+            return
+        end
+    end
+    os.setComputerLabel("No Items Found")
+    return false
+end

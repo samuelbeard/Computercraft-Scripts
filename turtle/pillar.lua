@@ -1,4 +1,5 @@
 os.loadAPI("move")
+os.loadAPI("inv")
 
 args = {...}
 height = args[1] -- Height of the pillar.
@@ -13,21 +14,22 @@ end
 function buildTower()
   os.setComputerLabel("Building a Pillar")
   for x=1, height do
+    inv.selectNextSlotWithItems()
     turtle.place()
-    if (checkAbove() == false) then
+    if (!checkAbove()) then
       error()
     end
     move.u(1)
   end
   os.setComputerLabel("Going Down")
-  move.d(height)
+  move.floor()
 end
 
-turtle.select(1)
-if (turtle.getItemCount() >= tonumber(height)) then
+
+-- Start Script
+if (inv.hasEnoughItems(height)) then
+  inv.selectNextSlotWithItems()
   buildTower()
 else
-  -- print("Not Enought Resources")
-  os.setComputerLabel("Not Enought Resources")
+  os.setComputerLabel("Not Enough Resources")
 end
-os.setComputerLabel("Done")

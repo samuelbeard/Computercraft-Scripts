@@ -1,5 +1,5 @@
 os.loadAPI("move")
-os.loadAPI("sort")
+os.loadAPI("inv")
 
 -- Place items in any slot of the turtle.
 
