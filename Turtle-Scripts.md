@@ -22,7 +22,7 @@ Collects cargo from one chest and delivers it to another.
 Start the turtle next to the inventory it will be taking from.
 </details>
 
-<detail>
+<details>
 <summary>Pillar</summary>
 
 ```
@@ -39,7 +39,7 @@ Builds a 1 block pillar to the specified height.
 - If no height is given. Go until it either runs out of materials or hits something above it.
 - Use the `floor()` function to go back down instead of counting.
 
-</detail>
+</details>
 
 ---
 ### Floor - NOT WORKING
