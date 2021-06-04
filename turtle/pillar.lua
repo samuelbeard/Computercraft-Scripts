@@ -16,7 +16,7 @@ function buildTower()
   for x=1, height do
     inv.selectNextSlotWithItems()
     turtle.place()
-    if (!checkAbove()) then
+    if (checkAbove() == false) then
       error()
     end
     move.u(1)
