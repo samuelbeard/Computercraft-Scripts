@@ -23,6 +23,7 @@ function buildTower()
   end
   os.setComputerLabel("Going Down")
   move.floor()
+  os.setComputerLabel("Done")
 end
 
 
