@@ -5,7 +5,7 @@ function hasEnoughItems(x)
         total = total + turtle.getItemCount(x)
     end
 
-    if (total >= x) then
+    if (total >= tonumber(x)) then
         return true
     else
         return false
@@ -18,9 +18,9 @@ function findMoreItems()
         if (turtle.getItemCount(x) > 0) then
             return x
         end
-        if (x == 9) {
+        if (x == 9) then
             return false
-        }
+        end
     end
 end
 
